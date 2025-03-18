@@ -58,7 +58,7 @@
             // 
             // buttonCreateQueue
             // 
-            buttonCreateQueue.Location = new Point(559, 368);
+            buttonCreateQueue.Location = new Point(634, 264);
             buttonCreateQueue.Name = "buttonCreateQueue";
             buttonCreateQueue.Size = new Size(146, 35);
             buttonCreateQueue.TabIndex = 0;
@@ -68,16 +68,17 @@
             // 
             // buttonClearQueue
             // 
-            buttonClearQueue.Location = new Point(559, 409);
+            buttonClearQueue.Location = new Point(634, 305);
             buttonClearQueue.Name = "buttonClearQueue";
             buttonClearQueue.Size = new Size(146, 35);
             buttonClearQueue.TabIndex = 0;
             buttonClearQueue.Text = "Очистить очередь";
             buttonClearQueue.UseVisualStyleBackColor = true;
+            buttonClearQueue.Click += buttonClearQueue_Click;
             // 
             // buttonGetMax
             // 
-            buttonGetMax.Location = new Point(336, 368);
+            buttonGetMax.Location = new Point(411, 264);
             buttonGetMax.Name = "buttonGetMax";
             buttonGetMax.Size = new Size(202, 35);
             buttonGetMax.TabIndex = 0;
@@ -86,41 +87,39 @@
             // 
             // buttonAddNew
             // 
-            buttonAddNew.Location = new Point(12, 368);
+            buttonAddNew.Location = new Point(87, 264);
             buttonAddNew.Name = "buttonAddNew";
             buttonAddNew.Size = new Size(202, 35);
             buttonAddNew.TabIndex = 0;
             buttonAddNew.Text = "Вставить новый";
             buttonAddNew.UseVisualStyleBackColor = true;
-            buttonAddNew.Click += buttonCreateQueue_Click;
             // 
             // buttonResetPriority
             // 
-            buttonResetPriority.Location = new Point(12, 409);
+            buttonResetPriority.Location = new Point(87, 305);
             buttonResetPriority.Name = "buttonResetPriority";
             buttonResetPriority.Size = new Size(202, 35);
             buttonResetPriority.TabIndex = 0;
             buttonResetPriority.Text = "Изменить приоритет";
             buttonResetPriority.UseVisualStyleBackColor = true;
-            buttonResetPriority.Click += buttonCreateQueue_Click;
             // 
             // numericUpDownAddNew
             // 
-            numericUpDownAddNew.Location = new Point(243, 376);
+            numericUpDownAddNew.Location = new Point(318, 272);
             numericUpDownAddNew.Name = "numericUpDownAddNew";
             numericUpDownAddNew.Size = new Size(76, 23);
             numericUpDownAddNew.TabIndex = 1;
             // 
             // numericUpDownFrom
             // 
-            numericUpDownFrom.Location = new Point(243, 417);
+            numericUpDownFrom.Location = new Point(318, 313);
             numericUpDownFrom.Name = "numericUpDownFrom";
             numericUpDownFrom.Size = new Size(76, 23);
             numericUpDownFrom.TabIndex = 1;
             // 
             // numericUpDownTo
             // 
-            numericUpDownTo.Location = new Point(369, 417);
+            numericUpDownTo.Location = new Point(444, 313);
             numericUpDownTo.Name = "numericUpDownTo";
             numericUpDownTo.Size = new Size(76, 23);
             numericUpDownTo.TabIndex = 1;
@@ -129,7 +128,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(220, 417);
+            label1.Location = new Point(295, 313);
             label1.Name = "label1";
             label1.Size = new Size(17, 21);
             label1.TabIndex = 2;
@@ -139,7 +138,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label2.Location = new Point(336, 417);
+            label2.Location = new Point(411, 313);
             label2.Name = "label2";
             label2.Size = new Size(27, 21);
             label2.TabIndex = 2;
@@ -149,7 +148,7 @@
             // 
             buttonExit.BackgroundImage = (Image)resources.GetObject("buttonExit.BackgroundImage");
             buttonExit.BackgroundImageLayout = ImageLayout.Zoom;
-            buttonExit.Location = new Point(735, 368);
+            buttonExit.Location = new Point(810, 264);
             buttonExit.Name = "buttonExit";
             buttonExit.Size = new Size(64, 76);
             buttonExit.TabIndex = 3;
@@ -160,7 +159,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label3.Location = new Point(270, 5);
+            label3.Location = new Point(360, 5);
             label3.Name = "label3";
             label3.Size = new Size(231, 21);
             label3.TabIndex = 4;
@@ -169,16 +168,18 @@
             // dataGridViewArray
             // 
             dataGridViewArray.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewArray.ColumnHeadersVisible = false;
             dataGridViewArray.Location = new Point(4, 29);
             dataGridViewArray.Name = "dataGridViewArray";
-            dataGridViewArray.Size = new Size(776, 28);
+            dataGridViewArray.RowHeadersVisible = false;
+            dataGridViewArray.Size = new Size(903, 28);
             dataGridViewArray.TabIndex = 5;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label4.Location = new Point(270, 60);
+            label4.Location = new Point(360, 60);
             label4.Name = "label4";
             label4.Size = new Size(223, 21);
             label4.TabIndex = 4;
@@ -187,16 +188,18 @@
             // dataGridViewTree
             // 
             dataGridViewTree.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewTree.ColumnHeadersVisible = false;
             dataGridViewTree.Location = new Point(4, 84);
             dataGridViewTree.Name = "dataGridViewTree";
-            dataGridViewTree.Size = new Size(776, 213);
+            dataGridViewTree.RowHeadersVisible = false;
+            dataGridViewTree.Size = new Size(903, 103);
             dataGridViewTree.TabIndex = 5;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label5.Location = new Point(313, 300);
+            label5.Location = new Point(399, 190);
             label5.Name = "label5";
             label5.Size = new Size(147, 21);
             label5.TabIndex = 4;
@@ -205,9 +208,11 @@
             // dataGridViewResultSelection
             // 
             dataGridViewResultSelection.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewResultSelection.Location = new Point(6, 324);
+            dataGridViewResultSelection.ColumnHeadersVisible = false;
+            dataGridViewResultSelection.Location = new Point(4, 214);
             dataGridViewResultSelection.Name = "dataGridViewResultSelection";
-            dataGridViewResultSelection.Size = new Size(776, 28);
+            dataGridViewResultSelection.RowHeadersVisible = false;
+            dataGridViewResultSelection.Size = new Size(903, 28);
             dataGridViewResultSelection.TabIndex = 5;
             // 
             // groupBox1
@@ -218,9 +223,9 @@
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
-            groupBox1.Location = new Point(12, 4);
+            groupBox1.Location = new Point(28, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(787, 358);
+            groupBox1.Size = new Size(911, 246);
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
             // 
@@ -228,7 +233,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(810, 450);
+            ClientSize = new Size(969, 350);
             Controls.Add(groupBox1);
             Controls.Add(buttonExit);
             Controls.Add(label2);
